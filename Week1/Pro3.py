@@ -1,0 +1,22 @@
+=input("请输入字符串");
+len_s=len(s);
+start=0;
+lens=0;
+lst=[];
+Rlt=[];
+clrnum=1;####记录我们得到的列表标号，从1开始，即第一次进入清除列表时我们形成了第一个列表
+lst.append(s[start])
+while(start+1<=len_s-1):
+    if(ord(s[start+1])>=ord(s[start])):
+        lst.append(s[start+1])
+    else:
+        #if(clrnum==1):
+         #   lstfst=lst;##把第一次得到的列表保存下来，因为可能最终要输出
+        This_len=len(lst);
+        rlt_len=len(Rlt);
+        if(This_len>rlt_len):
+            Rlt=lst.copy();
+        lst.clear();
+        lst.append(s[start+1])
+    start+=1;
+print(Rlt);
